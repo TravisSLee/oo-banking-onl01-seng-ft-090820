@@ -13,5 +13,11 @@ class Transfer
    sender.valid? && receiver.valid?
   end
   
+  def execute_transaction(amount)
+    if valid?
+      sender.withdraw(amount) 
+      receiver.deposit(amount)
+    end
+  end
   
 end
