@@ -10,5 +10,6 @@ class Transfer
   end
   
   def valid?
-    
+    person_1 = Bank_account
+  end
 end
