@@ -10,9 +10,9 @@ class Transfer
   end
   
   def valid?
-    person_1 = BankAccount.new(sender)
-    person_2 = BankAccount.new(receiver)
-    if person_1.valid? == TRUE && person_2.valid? == TRUE
+    sender_account = BankAccount.new(sender)
+    receiver_account = BankAccount.new(receiver)
+    if sender_account.valid? == TRUE && receiver_account.valid? == TRUE
       TRUE
     else
       FALSE
