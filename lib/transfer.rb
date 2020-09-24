@@ -9,7 +9,7 @@ class Transfer
     @status = "pending"
   end
   
-  def valid?()
+  def valid?(sender)
     sender_account = BankAccount.new(self.sender)
     receiver_account = BankAccount.new(self.receiver)
     if sender_account.valid? == TRUE && receiver_account.valid? == TRUE
