@@ -13,7 +13,7 @@ class Transfer
    sender.valid? && receiver.valid?
   end
   
-  def execute_transaction(amount)
+  def execute_transaction
     if valid? && sender.balance > amount && self.status == "pending"
       sender.withdrawal(self.amount)
       receiver.deposit(self.amount)
